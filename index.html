@@ -11,7 +11,7 @@
 
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./css/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -28,44 +28,43 @@
 <body onload="loadDays()">
     <!-- <div class="container"> -->
     <!-- Just an image -->
-    <div id="navbar">
-        <div class="top-section">
-            <div class="logo">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/harp-logo.png" height="90" alt="harp saver">
+    <header id="navbar">
+        <div id="topSection">
+            <div id="logo">
+                <a id="navbarBrand" href="#">
+                    <img src="./img/harp-logo.png" alt="harp saver">
                 </a>
             </div>
-            <div class="vertical-line"></div>
-            <div class="rpc">
-                <p class="application-name">Rough<br />Pension<br />Calculator</p>
+            <div id="verticalLine"></div>
+            <div id="rpc">
+                <p id="applicationName">Rough Pension Calculator</p>
             </div>
-            <div class="top-slogan">
-                <p class="top-slogan-text">Zorientuj się, jaka kwota emerytury<br />
-                    przysługuje Ci za pracę w Irlandii.</p>
-            </div>
+
         </div>
-
-    </div>
+    </header>
     <!-- </div> -->
-    <div class="nav-shadow"></div>
+    <div id="topSlogan">
+        <p id="topSloganText">Zorientuj się, jaka kwota emerytury<br />
+            przysługuje Ci za pracę w Irlandii.</p>
+    </div>
 
-    <div id="light-gray-background">
+    <main id="lightGrayBackground">
         <!-- <div class="row"> row 1-->
         <div class="main-header">
-            <div id="header">
-                <p id="header-text">Kalkulator umożliwia obliczenie orientacyjnego wymiaru należnych świadczeń
-                    emerytalnych *<sup>)</sup><br />po wprowadzeniu podstawowych danych w odpowiednie pola
-                    poniższego kalkulatora.</p>
-            </div>
+            <!-- <div id="header"> -->
+            <p id="headerText">Kalkulator umożliwia obliczenie orientacyjnego wymiaru należnych świadczeń
+                emerytalnych *<sup>)</sup><br />po wprowadzeniu podstawowych danych w odpowiednie pola
+                poniższego kalkulatora.</p>
+            <!-- </div> -->
             <div id="triangle"></div>
         </div>
         <!--  </div> end row 1-->
 
         <!-- <div class="row"> row 2-->
-        <div class="main-panel">
-            <div class="gap-row">
+        <section class="main-panel">
+            <!-- <div class="gap-row">
                 <div class="gap-row-right-half"></div>
-            </div>
+            </div> -->
 
             <div class="three-steps">
                 <div class="single-step first-step step-number">1.</div>
@@ -75,9 +74,11 @@
                     </p>
                 </div>
                 <div class="step-arrowhead">
-                    <div class="arrow-first"><img src="img/arrowhead_01.png" /></div>
+                    <div id="arrowFirst"><!--<img src="img/arrowhead_01.png" />--></div>
+                    <!-- <div id="arrowFirstShadow"><img src="img/arrowhead_01.png" /></div> -->
                 </div>
-
+                <!-- </div> -->
+                <!-- <div> -->
                 <div class="display">
                     <div class="times_fields">
                         <select class="fields_day" id="daypicker_start">
@@ -88,16 +89,16 @@
                         </select>
                     </div>
                 </div>
-                <div style="clear: both"></div>
+                <!-- <div style="clear: both"></div> -->
             </div>
-
+            <!-- 
             <div id="gap-row-1">
                 <div class="gap-row-right-half">
                     <div id="warning-background-1">
                         <p id="start-comment"></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="three-steps">
                 <div class="single-step second-step step-number">2.</div>
@@ -107,7 +108,9 @@
                     </p>
                 </div>
                 <div class="step-arrowhead">
-                    <div class="arrow-second"><img src="img/arrowhead_02.png" /></div>
+                    <!-- <div class="arrow-second"><img src="img/arrowhead_02.png" /></div> -->
+                    <div id="arrowSecond"></div>
+                    <!-- <div id="arrowSecondShadow"></div> -->
                 </div>
 
                 <div class="display">
@@ -121,16 +124,16 @@
 
                     </div>
                 </div>
-                <div style="clear: both"></div>
+                <!-- <div style="clear: both"></div> -->
             </div>
 
-            <div id="gap-row-2">
+            <!-- <div id="gap-row-2">
                 <div class="gap-row-right-half">
                     <div id="warning-background-2">
                         <p id="finish-comment"></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="three-steps">
                 <div class="single-step third-step step-number">3.</div>
@@ -138,7 +141,8 @@
                     <p class="step-desc-content">Data urodzenia.</p>
                 </div>
                 <div class="step-arrowhead">
-                    <div class="arrow-third"><img src="img/arrowhead_03.png" /></div>
+                    <!-- <div class="arrow-third"><img src="img/arrowhead_03.png" /></div> -->
+                    <div id="arrowThird"></div>
                 </div>
 
                 <div class="display">
@@ -152,58 +156,58 @@
 
                     </div>
                 </div>
-                <div style="clear: both"></div>
+                <!-- <div style="clear: both"></div> -->
             </div>
-            <div id="gap-row-3">
+            <!-- <div id="gap-row-3">
                 <div class="gap-row-right-half">
                     <div id="warning-background-3">
                         <p id="dob-comment"></p>
                     </div>
                 </div>
-            </div>
-            <div class="gap-row"></div>
+            </div> -->
+            <!-- <div class="gap-row"></div> -->
 
-        </div> <!--end main panel-->
+        </section> <!--end main panel-->
         <!-- </div> end row 2-->
 
         <!--  <div class="row"> row 3-->
-        <div class="result-section">
-            <div class="gap-row"></div>
+        <section class="result-section">
+            <!-- <div class="gap-row"></div> -->
 
             <div class="forth-step forth-step-number">4.</div>
-            <!-- <div class="forth-step-description forth-step"> -->
-            <button type="button" class="button" id="btn-start" onclick="comparePRSI()">OBLICZ</button>
-            <!-- </div> -->
+            <div class="forth-step-description forth-step">
+                <button type="button" class="button" id="btn-start" onclick="comparePRSI()">OBLICZ</button>
+            </div>
             <div class="step-arrowhead">
-                <div class="arrow-forth"><img src="img/arrowhead_04.png" /></div>
+                <!-- <div class="arrow-forth"><img src="img/arrowhead_04.png" /></div> -->
+                <div id="arrowForth"></div>
             </div>
 
 
             <div class="gap-row">
-                <div id="result-field">Wyliczona kwota należnego świadczenia emerytalnego</div>
+                <div id="resultField">Wyliczona kwota należnego świadczenia emerytalnego</div>
             </div>
 
-            <div style="clear: both;"></div>
-        </div>
+            <!-- <div style="clear: both;"></div> -->
+        </section>
         <!--  </div> end row 3 -->
 
         <!--  <div class="row"> row 4-->
-        <div id="information-for-user"></div>
+        <!-- <div id="information-for-user"></div> -->
         <!--  </div> end row 4-->
-    </div><!-- end container-->
-    </div> <!-- end light-grey-background -->
+        </div><!-- end container-->
+    </main> <!-- end light-grey-background -->
 
-    <div class="footer-shadow"></div>
-    <div id="footer">
+    <footer id="footer">
         <!-- <div class="row"> row 4 -->
-        <div id="bottom-section">
+        <div id="bottomSection">
             <p class="footer-text"><span id="footer-asterix">*<sup>)</sup></span>Obliczenia dokonane w oparciu o zasady
                 przedstawione na stronie
                 http://www.citizensinformation.ie/en/&hairsp;social_welfare/&hairsp;social_welfare_payments/&hairsp;older_and_retired_people/&hairsp;state_pension_contributory.htm
                 według stanu z lutego 2019 r.</p>
         </div>
         <!-- </div> -->
-    </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
